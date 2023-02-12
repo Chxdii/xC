@@ -1,0 +1,23 @@
+<script src="https://aframe.io/releases/1.4.1/aframe.min.js"></script>
+<a-scene embedded>
+	<a-assets>
+		<img id="img1" src="1010100101" />
+		<img id="img2" src="10110101001" />
+		<img id="img3" src="10101000101001" />
+	</a-assets>
+
+	<a-camera wasd-controls="enabled: false;"></a-camera>
+	<a-sky src="#img1" rotation="0 -130 0" animation="property: rotation; to: 0 130 0; loop: true; dur: 10000"></a-sky>
+
+</a-scene>
+
+<script>
+	var index = 0;
+	var images = document.querySelectorAll('a-assets img');
+	var sky = document.querySelector('a-sky');
+	window.addEventListener('click', function(e) {
+		index = (index + 1) % images.length;
+		sky.setAttribute('src', '#' + images[index].id);
+		sky.setAttribute('animation', {property: 'rotation', to: '0 -130 0', loop: true, dur: 10000});
+	});
+</script>
