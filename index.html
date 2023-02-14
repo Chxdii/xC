@@ -16,6 +16,9 @@
 		<img id="img13" src="https://raw.githubusercontent.com/Chxdii/xC/main/img/xc13.jpg" />
 		<img id="img14" src="https://raw.githubusercontent.com/Chxdii/xC/main/img/xc14.jpg" />
 		<img id="img15" src="https://raw.githubusercontent.com/Chxdii/xC/main/img/xc15.jpg" />
+		<img id="img16" src="https://raw.githubusercontent.com/Chxdii/xC/main/img/xc16.jpg" />
+		<img id="img17" src="https://raw.githubusercontent.com/Chxdii/xC/main/img/xc17.jpg" />
+		<img id="img18" src="https://raw.githubusercontent.com/Chxdii/xC/main/img/xc18.jpg" />
 	</a-assets>
 
 	<a-camera wasd-controls="enabled: false;"></a-camera>
@@ -24,12 +27,21 @@
 </a-scene>
 
 <script>
-	var index = 0;
+
 	var images = document.querySelectorAll('a-assets img');
+
 	var sky = document.querySelector('a-sky');
+
 	window.addEventListener('click', function(e) {
-		index = (index + 1) % images.length;
-		sky.setAttribute('src', '#' + images[index].id);
-		sky.setAttribute('animation', {property: 'rotation', to: '0 -130 0', loop: true, dur: 5000});
-	});
+
+		var index = Math.floor
+
+    (Math.random() * images.length);
+
+sky.setAttribute('src', '#' + images[index].id);
+
+sky.setAttribute('animation', {property: 'rotation', to: '0 -130 0', loop: true, dur: 10000});
+
+});
+
 </script>
