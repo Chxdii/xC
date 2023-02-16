@@ -31,21 +31,12 @@
 </a-scene>
 
 <script>
-
+	var index = 0;
 	var images = document.querySelectorAll('a-assets img');
-
 	var sky = document.querySelector('a-sky');
-
 	window.addEventListener('click', function(e) {
-
-		var index = Math.floor
-
-    (Math.random() * images.length);
-
-sky.setAttribute('src', '#' + images[index].id);
-
-sky.setAttribute('animation', {property: 'rotation', to: '0 -130 0', loop: true, dur: 10000});
-
-});
-
+		index = (index + 1) % images.length;
+		sky.setAttribute('src', '#' + images[index].id);
+		sky.setAttribute('animation', {property: 'rotation', to: '0 -130 0', loop: true, dur: 10000});
+	});
 </script>
