@@ -1,4 +1,4 @@
-# Project Title
+# Project Title ![alt text](https://api.iconify.design/teenyicons:360-outline.svg?color=Black)
 
 Simple overview of use/purpose.
 
